@@ -1,7 +1,7 @@
 import request from 'supertest'
 import { describe, expect, it, vi } from 'vitest'
 
-import { getAllProducts, getProductsById } from '../../db/functions/products'
+import { getAllProducts } from '../../db/functions/products'
 import server from '../../server'
 
 vi.mock('../../db/functions/products')
@@ -32,18 +32,17 @@ describe('Get /api/v1/products', () => {
     `)
   })
 
-  it('should return an error message when db fails'),
-    async () => {
-      vi.mocked(getAllProducts).mockRejectedValue(
-        Error('SQLITE ERROR: SOMETHING')
-      )
-      vi.spyOn(console, 'error').mockImplementation(() => {})
+  it('should return an error message when db fails', async () => {
+    vi.mocked(getAllProducts).mockRejectedValue(
+      new Error('SQLITE ERROR: SOMETHING')
+    )
+    vi.spyOn(console, 'error').mockImplementation(() => {})
 
-      const response = await request(server).get('/api/v1/products')
+    const response = await request(server).get('/api/v1/products')
 
-      expect(console.error).toHaveBeenCalledWith(
-        Error('SQLITE ERROR: SOMETHING')
-      )
-      expect(response.body.error).toBe('Could not get products')
-    }
+    expect(console.error).toHaveBeenCalledWith(
+      new Error('SQLITE ERROR: SOMETHING')
+    )
+    expect(response.body.error).toBe('Could not get products')
+  })
 })
