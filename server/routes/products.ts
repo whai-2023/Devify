@@ -19,6 +19,7 @@ router.get('/:id', async (req, res) => {
   const id = Number(req.params.id)
   if (isNaN(id)) {
     res.status(400).send('ID must be a number')
+    return
   }
   try {
     const productId = await db.getProductsById(id)
@@ -27,6 +28,7 @@ router.get('/:id', async (req, res) => {
     }
     res.json(productId)
   } catch (error) {
+    console.log(error)
     res.status(500).json({ error: 'Could not get product' })
   }
 })

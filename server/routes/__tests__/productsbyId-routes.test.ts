@@ -33,19 +33,21 @@ describe('Get /api/v1/products/:id', () => {
   it('should respond with an error when the request fails', async () => {
     // Arrange
     vi.mocked(getProductsById).mockRejectedValue(new Error('SQLITE Error'))
+    vi.spyOn(console, 'log').mockImplementation(() => {})
 
     // Act
     const response = await request(server).get('/api/v1/products/3')
 
     // Assert
     expect(response.body.error).toBe('Could not get product')
+    expect(console.log).toHaveBeenCalledWith(new Error('SQLITE Error'))
   })
 
-  // it('should respond with an error if productId is not a number', async () => {
-  //   const response = await request(server).get('/api/v1/products/a')
+  it('should respond with an error if productId is not a number', async () => {
+    const response = await request(server).get('/api/v1/products/a')
 
-  //   expect(response.text).toBe('ID must be a number')
-  // })
+    expect(response.text).toBe('ID must be a number')
+  })
 
   it('should respond with an error if product information is undefined', async () => {
     vi.mocked(getProductsById).mockResolvedValue(undefined)
