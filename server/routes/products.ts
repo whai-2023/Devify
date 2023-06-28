@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
   try {
     const productId = await db.getProductsById(id)
     if (!productId) {
-      res.status(400).send('That product does not exist')
+      res.status(404).send('That product does not exist')
     }
     res.json(productId)
   } catch (error) {

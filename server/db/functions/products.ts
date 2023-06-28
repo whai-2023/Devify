@@ -9,7 +9,7 @@ export async function getAllProducts(db = connection): Promise<Products[]> {
 export async function getProductsById(
   id: number,
   db = connection
-): Promise<Products> {
+): Promise<Products | undefined> {
   const product = await db('products').select().where('id', id).first()
   return product
 }
