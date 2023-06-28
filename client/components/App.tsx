@@ -1,10 +1,12 @@
 function App() {
   return (
     <>
-      <header className="header">
-        <h1>My Collection</h1>
+      <header>
+        <h1 className="text-3xl font-bold underline bg-blue-300">
+          My Collection
+        </h1>
       </header>
-      <section className="main">{/* add your code here */}</section>
+      <p className="bg-blue-300">Is it working</p>
     </>
   )
 }
