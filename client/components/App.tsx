@@ -1,3 +1,5 @@
+import { Outlet } from 'react-router-dom'
+
 function App() {
   return (
     <>
@@ -7,6 +9,7 @@ function App() {
         </h1>
       </header>
       <p className="bg-blue-300">Is it working</p>
+      <Outlet />
     </>
   )
 }
