@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <header>
-        <h1 className="text-3xl font-bold underline bg-blue-300">
+        <h1 className="text-3xl font-bold underline border-stone-100">
           <Navbar />
         </h1>
       </header>
