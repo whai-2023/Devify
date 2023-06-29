@@ -5,8 +5,8 @@ import productsRoutes from './routes/products'
 const server = express()
 
 server.use(express.json())
-
 server.use('/api/v1/products', productsRoutes)
+server.use(express.static(path.join(__dirname, 'public')))
 
 if (process.env.NODE_ENV === 'production') {
   server.use('/assets', express.static(path.resolve(__dirname, '../assets')))

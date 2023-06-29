@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from './layout/Navbar'
+import ProductDisplay from './layout/Product-Display'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
 
       <Outlet />
+      <ProductDisplay />
     </>
   )
 }
