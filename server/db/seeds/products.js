@@ -28,7 +28,7 @@ exports.seed = async function (knex) {
       price: 2000,
       description:
         'Introducing the iPad by Apple: a remarkable blend of power and versatility. Discover a stunning Retina display, powerful performance, and a world of limitless possibilities. With advanced features like Apple Pencil support, all-day battery life, and a vast selection of apps, the iPad redefines what a tablet can do. Unleash your creativity and productivity with the iPad.',
-      imageUrl: '/images/iphone1.png',
+      imageUrl: '/images/Ipad-Pro.jpeg',
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ exports.seed = async function (knex) {
       price: 350,
       description:
         "Introducing Sarah's Cat, Cream: a purrfect companion filled with endless love and charm. With its soft fur, playful nature, and mesmerizing eyes, this feline friend brings joy to Sarah's life. Whether curling up for cuddles or entertaining with acrobatic antics, Sarah's Cat is a delightful addition to any home. Embrace the love and warmth of Sarah's Cat today.",
-      imageUrl: '/images/',
+      imageUrl: '/images/Cream.png',
     },
   ])
 }
