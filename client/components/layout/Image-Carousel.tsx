@@ -28,7 +28,7 @@ export default function ImageCarousel() {
       <img
         src={imageSrc}
         alt={title}
-        className="object-cover w-full h-80 sm:h-96 lg:h-120"
+        className="object-cover w-full h-80 sm:h-96 brightness-50 lg:h-128"
       />
       <div className="absolute bottom-4 left-4">
         <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
@@ -36,7 +36,7 @@ export default function ImageCarousel() {
           {name}
         </h3>
         <Link to={productPageUrl}>
-          <button className="bg-white hover:bg-gray-50 text-black font-bold py-3 px-6 sm:py-4 sm:px-8 lg:py-5 lg:px-9 rounded-full">
+          <button className="bg-white hover:bg-grey-400 text-black font-bold py-3 px-6 sm:py-4 sm:px-8 lg:py-5 lg:px-9 rounded-full">
             {buttonText}
           </button>
         </Link>
