@@ -11,25 +11,17 @@ describe('Get /api/v1/products', () => {
     vi.mocked(getAllProducts).mockResolvedValue([
       {
         id: 1,
-        name: 'iphone',
+        name: 'Iphone',
         price: 1500,
         description:
           'Introducing iPhone by Apple: a game-changer in the world of smartphones. Experience a seamless blend of stunning design, powerful performance, and innovative features. With an advanced camera system, immersive display, and Face ID security, iPhone sets the standard for excellence. Stay connected, capture memories, and unlock endless possibilities with the iconic iPhone.',
+        imageUrl: '/images/Iphone-14-Pro.jpeg',
       },
     ])
 
     const response = await request(server).get('/api/v1/products')
 
-    expect(response.body).toMatchInlineSnapshot(`
-      [
-        {
-          "description": "Introducing iPhone by Apple: a game-changer in the world of smartphones. Experience a seamless blend of stunning design, powerful performance, and innovative features. With an advanced camera system, immersive display, and Face ID security, iPhone sets the standard for excellence. Stay connected, capture memories, and unlock endless possibilities with the iconic iPhone.",
-          "id": 1,
-          "name": "iphone",
-          "price": 1500,
-        },
-      ]
-    `)
+    expect(response.body).toMatchInlineSnapshot()
   })
 
   it('should return an error message when db fails', async () => {
