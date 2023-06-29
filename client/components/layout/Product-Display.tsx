@@ -25,11 +25,11 @@ export default function ProductDisplay() {
           <p className="text-xs pt-2 font-light">View all</p>
         </Link>
       </div>
-      <div className="flex flex-wrap w-full m-auto items-center text-center justify-center object-contain">
+      <div className="flex max-w-3xl flex-wrap w-full m-auto items-center text-center justify-center object-contain">
         {products.map((product) => (
           <div
             key={product.id}
-            className="w-1/2 h-1/2 bg-white border-8 border-stone-100 p-5"
+            className="w-1/2 h-1/2 bg-white border-8 border-stone-100 p-5 "
           >
             <Link to={'/'}>
               <div className="group p-3">
@@ -39,7 +39,7 @@ export default function ProductDisplay() {
                 <img
                   src={product.imageUrl}
                   alt={product.name}
-                  className="w-80 m-auto mt-2 group-hover:scale-110 transform transition-transform"
+                  className="w-64 m-auto mt-2 group-hover:scale-110 transform transition-transform rounded-md"
                 />
               </div>
             </Link>
