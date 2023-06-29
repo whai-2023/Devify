@@ -1,9 +1,9 @@
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import macbookImage from '../../../Public/Images/macbook-pro-carousel.png'
-import iphoneImage from '../../../Public/Images/iphone-14-pro-carousel.png'
-import ipadImage from '../../../Public/Images/ipad-carousel.png'
-import airpodImage from '../../../Public/Images/airpods-carousel.png'
+import macbookImage from '/images/macbook-pro-carousel.png'
+import iphoneImage from '/images/iphone-14-pro-carousel.png'
+import ipadImage from '/public/images/ipad-carousel.png'
+import airpodImage from '/public/images/airpods-carousel.png'
 import { Link } from 'react-router-dom'
 
 export default function ImageCarousel() {
