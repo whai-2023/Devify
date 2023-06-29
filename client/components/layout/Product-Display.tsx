@@ -25,7 +25,7 @@ export default function ProductDisplay() {
           <p className="text-xs pt-2 font-light">View all</p>
         </Link>
       </div>
-      <div className="flex max-w-4xl flex-wrap w-full m-auto items-center text-center justify-center object-contain">
+      <div className="flex max-w-3xl flex-wrap w-full m-auto items-center text-center justify-center object-contain">
         {products.map((product) => (
           <div
             key={product.id}
