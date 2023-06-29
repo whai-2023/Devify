@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alice-carousel__dots {
+  @apply absolute bottom-4 right-4;
+}
