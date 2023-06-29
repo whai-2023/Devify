@@ -8,6 +8,7 @@ exports.up = function (knex) {
     table.string('name')
     table.text('description')
     table.integer('price')
+    table.string('imageUrl')
   })
 }
 
