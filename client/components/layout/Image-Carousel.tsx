@@ -28,7 +28,7 @@ export default function ImageCarousel() {
       <img
         src={imageSrc}
         alt={title}
-        className="object-cover w-full h-80 sm:h-96 brightness-50 lg:h-128"
+        className="object-cover w-full h-80 sm:h-96 brightness-75 lg:h-[600px]"
       />
       <div className="absolute bottom-4 left-4">
         <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
