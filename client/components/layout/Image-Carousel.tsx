@@ -45,48 +45,50 @@ export default function ImageCarousel() {
   )
 
   return (
-    <AliceCarousel
-      mouseTracking
-      items={[
-        <Slide
-          key="macbook"
-          imageSrc={macbookImage}
-          title="Introducing the"
-          name="MACBOOK PRO"
-          buttonText="Shop Now"
-          productPageUrl="/macbook" // LINKS NEED TO BE UPDATED
-        />,
-        <Slide
-          key="iphone"
-          imageSrc={iphoneImage}
-          title="Discover the new"
-          name="IPHONE 14 PRO"
-          buttonText="Shop Now"
-          productPageUrl="/iphone" // LINKS NEED TO BE UPDATED
-        />,
-        <Slide
-          key="ipad"
-          imageSrc={ipadImage}
-          title="Experience the Latest"
-          name="IPAD"
-          buttonText="Shop Now"
-          productPageUrl="/ipad" // LINKS NEED TO BE UPDATED
-        />,
-        <Slide
-          key="airpods"
-          imageSrc={airpodImage}
-          title="Get Immersed in Sound with"
-          name="AIRPODS"
-          buttonText="Shop Now"
-          productPageUrl="/airpods" // LINKS NEED TO BE UPDATED
-        />,
-      ]}
-      onSlideChanged={handleSlideChange}
-      autoPlay={true}
-      disableButtonsControls
-      autoPlayInterval={2000}
-      infinite
-      animationType="fadeout"
-    />
+    <div className="z-0">
+      <AliceCarousel
+        mouseTracking
+        items={[
+          <Slide
+            key="macbook"
+            imageSrc={macbookImage}
+            title="Introducing the"
+            name="MACBOOK PRO"
+            buttonText="Shop Now"
+            productPageUrl="/macbook" // LINKS NEED TO BE UPDATED
+          />,
+          <Slide
+            key="iphone"
+            imageSrc={iphoneImage}
+            title="Discover the new"
+            name="IPHONE 14 PRO"
+            buttonText="Shop Now"
+            productPageUrl="/iphone" // LINKS NEED TO BE UPDATED
+          />,
+          <Slide
+            key="ipad"
+            imageSrc={ipadImage}
+            title="Experience the Latest"
+            name="IPAD"
+            buttonText="Shop Now"
+            productPageUrl="/ipad" // LINKS NEED TO BE UPDATED
+          />,
+          <Slide
+            key="airpods"
+            imageSrc={airpodImage}
+            title="Get Immersed in Sound with"
+            name="AIRPODS"
+            buttonText="Shop Now"
+            productPageUrl="/airpods" // LINKS NEED TO BE UPDATED
+          />,
+        ]}
+        onSlideChanged={handleSlideChange}
+        autoPlay={true}
+        disableButtonsControls
+        autoPlayInterval={2000}
+        infinite
+        animationType="fadeout"
+      />
+    </div>
   )
 }
