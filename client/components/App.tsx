@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import ProductDisplay from './layout/Product-Display'
+import Footer from './layout/Footer'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <p className="bg-blue-300">Is it working</p>
       <Outlet />
+      <Footer />
     </>
   )
 }
