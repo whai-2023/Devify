@@ -3,6 +3,9 @@ module.exports = {
   content: ['./client/**/*.{ts,tsx}', './index.html'],
   theme: {
     extend: {
+      colors: {
+        primary: '#4A3AFF',
+      },
       fontFamily: {
         sans: [
           'Inter',

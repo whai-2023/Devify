@@ -15,11 +15,6 @@ export default function Navbar() {
           </div>
           <div>
             <ul className="md:flex hidden uppercase items-center gap-10">
-              <li>
-                <Link to="/" className="py-7 px-3 inline-block">
-                  DEVIFY
-                </Link>
-              </li>
               <NavLinks />
             </ul>
           </div>
