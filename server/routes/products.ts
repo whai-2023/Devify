@@ -23,6 +23,28 @@ router.get('/', async (req, res) => {
   }
 })
 
+// Get /api/v1/items/:id
+router.get('/items/:id', async (req, res) => {
+  const id = Number(req.params.id)
+
+  // req.params = { categories: 'wdaowa', id: '2' }
+  if (isNaN(id)) {
+    res.status(400).send('ID must be a number')
+    return
+  }
+  try {
+    const productId = await db.getProductsById(id)
+    console.log(productId)
+    if (!productId) {
+      res.status(404).send('That product does not exist')
+    }
+    res.json(productId)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Could not get product' })
+  }
+})
+
 router.get('/:category', async (req, res) => {
   const category = req.params.category
 
@@ -32,26 +54,6 @@ router.get('/:category', async (req, res) => {
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: 'Could not get products by category' })
-  }
-})
-
-// Get /api/v1/:categories/:id
-router.get('/:categories/:id', async (req, res) => {
-  const id = Number(req.params.id)
-  // req.params = { categories: 'wdaowa', id: '2' }
-  if (isNaN(id)) {
-    res.status(400).send('ID must be a number')
-    return
-  }
-  try {
-    const productId = await db.getProductsById(id)
-    if (!productId) {
-      res.status(404).send('That product does not exist')
-    }
-    res.json(productId)
-  } catch (error) {
-    console.log(error)
-    res.status(500).json({ error: 'Could not get product' })
   }
 })
 
