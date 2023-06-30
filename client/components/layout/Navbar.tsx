@@ -7,9 +7,9 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-border-stone-100">
-        <div className="flex items-center font-medium justify-between">
+        <div className="flex items-center font-medium justify-between ml-24">
           <div>
-            <h1 className="md:cursor-pointer font-bold absolute top-7 left-10 tracking-widest antialiased text-4xl">
+            <h1 className="md:cursor-pointer font-bold absolute top-7 px-52 tracking-widest antialiased text-4xl">
               DEVIFY
             </h1>
           </div>

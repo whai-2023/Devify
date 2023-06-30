@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import NavbarProduct from './Navbar-Product'
 
 export default function NavLink() {
   const links = [
@@ -26,36 +27,29 @@ export default function NavLink() {
     <>
       {links.map((links) => (
         <div key={links.name}>
-          <div className="px-3 text-left md:cursor-pointer group">
+          <div className="px-5 md:cursor-pointer group ml-20 hover:text-primary ">
             <h1 className="py-7">{links.name}</h1>
             {links.submenu && (
-              <div>
-                <div className="w-full absolute top-20 left-0 hidden group-hover:md:block hover:md:block  ">
-                  <div className="py-4">
-                    <div className="w-4 h-4 left-3 absolute mt-1 bg-black rotate-45"></div>
-                  </div>
-                  <div className="bg-white px-52 pt-5 grid grid-cols-3 gap-10 border-2 border-t-slate-800">
-                    {links.sublinks.map((mysublinks) => (
-                      <div key={mysublinks.Head}>
-                        <h1 className="text-2xl font-semibold">
-                          {mysublinks.Head}
-                        </h1>
-                        {mysublinks.sublink.map((slink) => (
-                          <li
-                            key={slink.name}
-                            className="text-lg text-gray-600 my2.5"
-                          >
-                            <Link
-                              to={slink.link}
-                              className="hover:text-primary"
-                            >
-                              {slink.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
+              <div className="w-full absolute top-20 left-0 hidden group-hover:md:block">
+                <div className="bg-white px-52 py-30 pt-4 flex border-2 border-t-slate-800 translate-y-2">
+                  {links.sublinks.map((mysublinks) => (
+                    <div key={mysublinks.Head}>
+                      <h1 className="text-base ml-24 pt-10 pb-4">
+                        {mysublinks.Head}
+                      </h1>
+                      {mysublinks.sublink.map((slink) => (
+                        <li
+                          key={slink.name}
+                          className="text-3xl text-gray-600 my2.5 ml-24 py-5"
+                        >
+                          <Link to={slink.link} className="hover:text-primary">
+                            {slink.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </div>
+                  ))}
+                  <NavbarProduct />
                 </div>
               </div>
             )}
