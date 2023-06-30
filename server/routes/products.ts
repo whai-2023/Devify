@@ -34,7 +34,6 @@ router.get('/items/:id', async (req, res) => {
   }
   try {
     const productId = await db.getProductsById(id)
-    console.log(productId)
     if (!productId) {
       res.status(404).send('That product does not exist')
     }

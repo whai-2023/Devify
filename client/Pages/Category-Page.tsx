@@ -46,12 +46,6 @@ export default function CategoryPage() {
           </div>
         </div>
       </div>
-      {/* <div>Hello</div>
-      <div>
-        {products.map((product) => (
-          <div key={product.id}>{product.name}</div>
-        ))}
-      </div> */}
     </>
   )
 }
