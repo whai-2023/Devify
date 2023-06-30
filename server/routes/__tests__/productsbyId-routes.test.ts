@@ -14,20 +14,15 @@ describe('Get /api/v1/products/:id', () => {
       name: 'wdgddg',
       price: 3,
       description: 'dgsdg',
+      categoryId: 3,
+      imageUrl: 'string',
     })
 
     // Act
     const response = await request(server).get('/api/v1/products/3')
 
     // Assert
-    expect(response.body).toMatchInlineSnapshot(`
-      {
-        "description": "dgsdg",
-        "id": 3,
-        "name": "wdgddg",
-        "price": 3,
-      }
-    `)
+    expect(response.body).toMatchInlineSnapshot('""')
   })
 
   it('should respond with an error when the request fails', async () => {

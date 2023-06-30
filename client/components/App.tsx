@@ -11,7 +11,6 @@ function App() {
       </header>
       <p className="bg-blue-300">Is it working</p>
       <Outlet />
-      <ProductDisplay />
     </>
   )
 }
