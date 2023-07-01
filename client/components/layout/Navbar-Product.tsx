@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getAllProducts } from '../../apis/products'
+import { getAllCategories } from '../../apis/products'
 import { Link } from 'react-router-dom'
 
 export default function NavbarProduct() {
@@ -7,7 +7,7 @@ export default function NavbarProduct() {
     data: products,
     isError,
     isLoading,
-  } = useQuery(['products'], () => getAllProducts())
+  } = useQuery(['products'], () => getAllCategories())
 
   if (isError) {
     return <div>Error occured while getting Products</div>
