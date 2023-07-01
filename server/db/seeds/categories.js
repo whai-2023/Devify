@@ -3,7 +3,6 @@
  * @returns { Promise<void> }
  */
 exports.seed = async function (knex) {
-  // Deletes ALL existing entries
   await knex('categories').del()
   await knex('categories').insert([
     { id: 1, name: 'phones', imageUrl: '/images/Iphone-14-Pro.jpeg' },

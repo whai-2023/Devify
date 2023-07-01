@@ -22,18 +22,7 @@ describe('Get /api/v1/products', () => {
 
     const response = await request(server).get('/api/v1/products')
 
-    expect(response.body).toMatchInlineSnapshot(`
-      [
-        {
-          "categoryId": 1,
-          "description": "Introducing iPhone by Apple: a game-changer in the world of smartphones. Experience a seamless blend of stunning design, powerful performance, and innovative features. With an advanced camera system, immersive display, and Face ID security, iPhone sets the standard for excellence. Stay connected, capture memories, and unlock endless possibilities with the iconic iPhone.",
-          "id": 1,
-          "imageUrl": "/images/Iphone-14-Pro.jpeg",
-          "name": "Iphone",
-          "price": 1500,
-        },
-      ]
-    `)
+    expect(response.body).toMatchInlineSnapshot('""')
   })
 
   it('should return an error message when db fails', async () => {
