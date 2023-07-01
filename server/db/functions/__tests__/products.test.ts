@@ -31,6 +31,7 @@ describe('getProductsbyId', () => {
       description:
         'Introducing iPhone by Apple: a game-changer in the world of smartphones. Experience a seamless blend of stunning design, powerful performance, and innovative features. With an advanced camera system, immersive display, and Face ID security, iPhone sets the standard for excellence. Stay connected, capture memories, and unlock endless possibilities with the iconic iPhone.',
       imageUrl: '/images/Iphone-14-Pro.jpeg',
+      catergory_id: 1,
     }
 
     const product = await getProductsById(1)
