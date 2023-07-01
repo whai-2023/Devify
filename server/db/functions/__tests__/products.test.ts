@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest'
 
 import connection from '../../connection'
-import { getAllProducts, getProductsById } from '../products'
+import { getAllProducts, getProductsById, getAllCategories } from '../products'
 
 beforeAll(() => {
   return connection.migrate.latest()
@@ -22,7 +22,14 @@ describe('getAllProducts', () => {
   })
 })
 
-describe('getProductsbyId', () => {
+describe('getAllCategories', () => {
+  it('should return all the categories', async () => {
+    const categories = await getAllCategories()
+    expect(categories).toHaveLength(5)
+  })
+})
+
+describe('getProductsById', () => {
   it('should return the correct product', async () => {
     const expectedOutput = {
       id: 1,
@@ -33,7 +40,6 @@ describe('getProductsbyId', () => {
       imageUrl: '/images/Iphone-14-Pro.jpeg',
       category_id: 1,
     }
-
     const product = await getProductsById(1)
 
     expect(product).toEqual(expectedOutput)

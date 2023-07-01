@@ -22,7 +22,7 @@ export async function getProductsById(
 export async function getProductsByCategory(
   category: string,
   db = connection
-): Promise<Products[]> {
+): Promise<Products[] | undefined> {
   const categoryId = await db('categories')
     .select('id')
     .where('name', category)

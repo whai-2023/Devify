@@ -6,7 +6,7 @@ import server from '../../server'
 
 vi.mock('../../db/functions/products')
 
-describe('Get /api/v1/products/:id', () => {
+describe('Get /api/v1/products/items/:id', () => {
   it('should return a product', async () => {
     // Arrange
     vi.mocked(getProductsById).mockResolvedValue({
