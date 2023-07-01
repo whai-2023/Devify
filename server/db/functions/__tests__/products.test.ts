@@ -21,14 +21,14 @@ describe('getAllProducts', () => {
     expect(products).toHaveLength(6)
   })
 })
-
+//broken
 describe('getAllCategories', () => {
   it('should return all the categories', async () => {
     const categories = await getAllCategories()
     expect(categories).toHaveLength(5)
   })
 })
-
+//broken
 describe('getProductsById', () => {
   it('should return the correct product', async () => {
     const expectedOutput = {
@@ -44,4 +44,8 @@ describe('getProductsById', () => {
 
     expect(product).toEqual(expectedOutput)
   })
+})
+//how
+describe('getProductsById', () => {
+  it.todo('should return correct array of products')
 })
