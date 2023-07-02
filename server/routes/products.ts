@@ -4,15 +4,7 @@ import * as db from '../db/functions/products'
 const router = Router()
 
 // GET all
-// router.get('/', async (req, res) => {
-//   try {
-//     const products = await db.getAllProducts()
-//     res.json(products)
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).send({ error: 'Could not get products' })
-//   }
-// })
+
 router.get('/', async (req, res) => {
   try {
     const categories = await db.getAllCategories()
@@ -46,12 +38,19 @@ router.get('/items/:id', async (req, res) => {
 
 router.get('/:category', async (req, res) => {
   const category = req.params.category
-
   try {
     const products = await db.getProductsByCategory(category)
+    if (
+      !['phones', 'tablets', 'laptops', 'earphones', 'animals'].includes(
+        category.toLowerCase()
+      )
+    ) {
+      res.status(404).send('That category does not exist')
+      return
+    }
     res.json(products)
   } catch (error) {
-    console.error(error)
+    console.log(error)
     res.status(500).json({ error: 'Could not get products by category' })
   }
 })

@@ -6,7 +6,7 @@ import server from '../../server'
 
 vi.mock('../../db/functions/products')
 
-describe('Get /api/v1/products/:id', () => {
+describe('Get /api/v1/products/items/:id', () => {
   it('should return a product', async () => {
     // Arrange
     vi.mocked(getProductsById).mockResolvedValue({
@@ -19,10 +19,19 @@ describe('Get /api/v1/products/:id', () => {
     })
 
     // Act
-    const response = await request(server).get('/api/v1/products/3')
+    const response = await request(server).get('/api/v1/products/items/3')
 
     // Assert
-    expect(response.body).toMatchInlineSnapshot('""')
+    expect(response.body).toMatchInlineSnapshot(`
+      {
+        "categoryId": 3,
+        "description": "dgsdg",
+        "id": 3,
+        "imageUrl": "string",
+        "name": "wdgddg",
+        "price": 3,
+      }
+    `)
   })
 
   it('should respond with an error when the request fails', async () => {
@@ -31,7 +40,7 @@ describe('Get /api/v1/products/:id', () => {
     vi.spyOn(console, 'log').mockImplementation(() => {})
 
     // Act
-    const response = await request(server).get('/api/v1/products/3')
+    const response = await request(server).get('/api/v1/products/items/3')
 
     // Assert
     expect(response.body.error).toBe('Could not get product')
@@ -39,7 +48,7 @@ describe('Get /api/v1/products/:id', () => {
   })
 
   it('should respond with an error if productId is not a number', async () => {
-    const response = await request(server).get('/api/v1/products/a')
+    const response = await request(server).get('/api/v1/products/items/a')
 
     expect(response.text).toBe('ID must be a number')
   })
@@ -47,7 +56,7 @@ describe('Get /api/v1/products/:id', () => {
   it('should respond with an error if product information is undefined', async () => {
     vi.mocked(getProductsById).mockResolvedValue(undefined)
 
-    const response = await request(server).get('/api/v1/products/6')
+    const response = await request(server).get('/api/v1/products/items/6')
 
     expect(response.status).toBe(404)
   })
