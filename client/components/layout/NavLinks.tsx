@@ -11,11 +11,11 @@ export default function NavLink() {
         {
           Head: 'Collection',
           sublink: [
-            { name: 'Iphone', link: '/' },
-            { name: 'Macbook', link: '/' },
-            { name: 'Ipad', link: '/' },
-            { name: 'Airpods', link: '/' },
-            { name: 'Cream', link: '/' },
+            { name: 'Iphone', link: '/phones' },
+            { name: 'Macbook', link: '/laptops' },
+            { name: 'Ipad', link: '/tablets' },
+            { name: 'Airpods', link: 'earphones' },
+            { name: 'Cream', link: '/animals' },
           ],
         },
       ],
@@ -28,7 +28,7 @@ export default function NavLink() {
       {links.map((links) => (
         <div key={links.name}>
           <div className="px-5 md:cursor-pointer group ml-20 hover:text-primary ">
-            <h1 className="py-7">{links.name}</h1>
+            <h1 className="py-2">{links.name}</h1>
             {links.submenu && (
               <div className="w-full absolute top-20 left-0 hidden group-hover:md:block">
                 <div className="bg-white px-52 py-30 pt-4 flex border-2 border-t-slate-800 translate-y-2">
