@@ -69,7 +69,7 @@ Ref: products.category_id > categories.id
 
 ## ![db diagram](/public/images/Wireframe.png)
 
-## Front End
+### Front End
 
 ### Routes
 
@@ -176,7 +176,7 @@ To show test coverage summary
   npm run test -- -coverage
 ```
 
-## Authors ✍🏻 & Links 🔗
+## Authors ✍🏻
 
 ### Jiho Burgess-Kim
 
