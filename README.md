@@ -1,96 +1,192 @@
-# Fullstack Collection App
+# Devify
 
-This repo is designed to provide space to code a fullstack app. It contains node modules and folders for databases, routes, API requests and React components that'll use React Query. Let's get going!
+## 🚀 About the project
 
-## Setup
+## ⚡️ Getting Started
 
-### 0. Cloning and installation
+This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For the best developer experience, install the [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode. Optionally, if you prefer, you may choose to use CSS Modules for a more traditional CSS experience.
 
-- [ ] Clone this repo, navigate to it, install packages, and start the server with `npm run dev`
-  <details style="padding-left: 2em">
-    <summary>Tip</summary>
+### Frontend:
 
-    You may also want to start a new branch
-    ```sh
-    cd my-fullstack-collection
-    npm i
-    git checkout -b <branchname>
-    npm run dev
-    ```
-  </details>
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [React Router](https://reactrouter.com/)
+- [Vite](https://vitejs.dev/)
+- [React Query](https://tanstack.com/query/latest/docs/react/overview)
 
-<details>
-  <summary>More about using <code>npm</code> vs <code>npx</code></summary>
+### Backend:
 
-  - When running knex, run `npm run knex <command>`, e.g. `npm run knex migrate:latest` rather than using `npx`
-</details>
+- [Express](https://expressjs.com/)
+- [Knex](http://knexjs.org/)
+- [SQLite3](https://www.sqlite.org/index.html)
 
----
+### Testing:
 
-## Requirements
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Vitest](https://vitest.dev/)
+- [nock](https://github.com/nock/nock)
+- [supertest](https://github.com/visionmedia/supertest)
 
-### 1. Choosing your data set
+## About the Project
 
-- [ ] First, decide what you would like to keep a collection of. This could be a repo for keeping track of movies, books, gifs, cars, rocks, anything you fancy, but keep it simple!
-  <details style="padding-left: 2em">
-    <summary>More about your collection</summary>
+### Backend
 
-    **Note:** the aim is to have some simple data. If you think you might need more than one database table, or have lots of details you want to store, how could you simplify the information you're keeping track of? Leave more complex data until later in the project. For example, I want to keep track of books that I want to read, ones that I have read, and ones that I own. To start with though, let's keep track of the books themselves. My data might look like:
+#### DB Schema
 
-    |id|title|author|
-    |---|---|---|
-    | 1 | Ready Player One | Ernest Cline |
-    | 2 | Throwing Rocks at the Google Bus | Douglas Rushkoff |
-
-Our first job is getting something showing on the front end from our database. Here's a list of steps in case they are useful. You can build in any order you like though ;)
-
-## Back end
-
-### 2. Building the database
-
-- [ ] Design a database to store a list of your things (e.g. books)
-- [ ] Build the migrations and seed data
-
-### 3. Building the API
-- [ ] Build an API (back end route) to get the information from your database
-- [ ] Test your API with Insomnia
-
-## Front end
-
-### 4. Setting the stage
-- [ ] Build a React component with static html
-
-### 5. Building the API client
-- [ ] Build an API client in the front end to request the information from your routes
-
-### 6. Querying Data 
-- [ ] Write a query with the `useQuery` hook to fetch the collection data from the API
-- [ ] Display the collection data you queried in a component (you may want to create a new component for this)
-
-### 7. Create Data
-- [ ] (Optional) Create a new component for your new collection item form
-- [ ] Mutate data with the `useMutation` hook to create a new collection item via the API 
-
-### 8. Delete Data
-- [ ] Mutate data with the `useMutation` hook to delete an exisiting collection item via the API (you may want to add this to your collection display component)
-
-### 9. Update Data
-- [ ] (Optional) Create a new component for your update collection item form
-- [ ] Mutate data with the `useMutation` hook to update an exisiting collection item via the API 
-
----
-
-## Stretch
+![db diagram](/public/images/db.png)
 
 <details>
-  <summary>More about stretch challenges</summary>
-  
-  - Forms can be tough to build accessibly. First ensure all parts of your form can be reached and used with keyboard-only navigation. Then test your form page with the WAVE browser extension, and fix any accessibility issues it detects
-  - Is there any complex data you chose to not include earlier or any way you could expand this dataset?
-    - You might have some other information (e.g. unread books vs. read books) that should be included in your database design, and this may require adjusting your database design
-  - Could you add an external API (maybe an inspirational quote in the footer?)
-  - If you haven't already, CSS!
+<summary>ERD code</summary>
+
+```ts
+Table categories {
+  id increments [primary key]
+  name string
+  imageUrl string
+}
+
+Table products {
+  id increments [primary key]
+  name string
+  description text
+  price integer
+  imageUrl string
+  category_id integer
+
+}
+
+
+
+
+Ref: products.category_id > categories.id
+
+```
+
+## </details>
+
+#### Wireframe
+
+## ![db diagram](/public/images/Wireframe.png)
+
+## Front End
+
+### Routes
+
+#### GET `/api/v1/products/`
+
+<details>
+
+Request:
+`GET /api/v1/products`
+
+Response:
+
+```json
+[
+  { "id": 1, "name": "phones", "imageUrl": "/images/Iphone-14-Pro.jpeg" },
+  { "id": 2, "name": "laptops", "imageUrl": "/images/Macbook-Pro-14-M1.jpeg" },
+  { "id": 3, "name": "tablets", "imageUrl": "/images/Ipad-Pro.jpeg" },
+  { "id": 4, "name": "earphones", "imageUrl": "/images/Airpod-Pro.jpeg" },
+  { "id": 5, "name": "animals", "imageUrl": "/images/Cream.png" }
+]
+```
+
 </details>
 
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=my-fullstack-collection-query)
+#### GET `/api/v1/products/items/:id`
+
+<details>
+Request:
+`GET /api/v1/products/items/1`
+
+Response:
+
+```json
+{
+  "id": 1,
+  "name": "Iphone 14 Pro",
+  "price": 1999,
+  "description": "Experience the pinnacle of innovation with the Apple iPhone 14 Pro. Boasting a 6.7-inch Super Retina XDR display with ProMotion technology, it delivers breathtaking visuals. Powered by the A16 Bionic chip and 8GB of RAM, this device offers unmatched performance and smooth multitasking. Capture professional-quality photos and videos with the triple-camera system and take advantage of the LiDAR scanner for augmented reality experiences. Your data remains secure with Face ID, and the larger battery supports fast charging and wireless charging. With 5G connectivity and iOS 15, the iPhone 14 Pro is a testament to Apple's commitment to excellence.",
+  "imageUrl": "/images/Iphone-14-Pro.jpeg",
+  "category_id": 1
+}
+```
+
+</details>
+
+#### GET `/api/v1/products/:category`
+
+<details>
+Request:
+`GET /api/v1/products/phones`
+
+Response:
+
+```json
+[
+  {
+    "category_id": 1,
+    "description": "Experience the pinnacle of innovation with the Apple iPhone 14 Pro. Boasting a 6.7-inch Super Retina XDR display with ProMotion technology, it delivers breathtaking visuals. Powered by the A16 Bionic chip and 8GB of RAM, this device offers unmatched performance and smooth multitasking. Capture professional-quality photos and videos with the triple-camera system and take advantage of the LiDAR scanner for augmented reality experiences. Your data remains secure with Face ID, and the larger battery supports fast charging and wireless charging. With 5G connectivity and iOS 15, the iPhone 14 Pro is a testament to Apple's commitment to excellence.",
+    "id": 1,
+    "imageUrl": "/images/Iphone-14-Pro.jpeg",
+    "name": "Iphone 14 Pro",
+    "price": 1999
+  },
+  {
+    "category_id": 1,
+    "description": "Introducing the iPhone 14 Plus, the epitome of innovation and elegance in the world of smartphones. With its larger display and cutting-edge features, this device takes your mobile experience to a whole new level. The iPhone 14 Plus boasts a generous 6.5-inch Super Retina XDR display, offering vibrant colors and stunning visuals. Powered by the latest A16 Bionic chip, it delivers unrivaled speed and efficiency for seamless performance. Capture your life's moments in breathtaking detail with the advanced camera system, while Face ID ensures top-notch security. Embrace the future with 5G connectivity, and enjoy the latest iOS features for an unparalleled user experience. The iPhone 14 Plus is a perfect blend of style and substance, making it the ideal choice for those seeking the best in technology and design.",
+    "id": 6,
+    "imageUrl": "/images/Iphone-14-Plus.jpeg",
+    "name": "Iphone 14 Plus",
+    "price": 1799
+  },
+  {
+    "category_id": 1,
+    "description": "Introducing the iPhone 14, the next evolution in smartphone technology. With its sleek design and groundbreaking features, the iPhone 14 sets a new standard for innovation. Equipped with a stunning 6.1-inch Super Retina XDR display, this device delivers immersive visuals with vibrant colors and sharp details. Powered by the advanced A16 Bionic chip, it offers blazing-fast performance and enhanced efficiency for seamless multitasking. Capture professional-quality photos and videos with the improved camera system, and enjoy enhanced security with Face ID. Stay connected with lightning-fast 5G connectivity, and explore the latest iOS features that redefine the way you interact with your phone. The iPhone 14 is the epitome of excellence, combining cutting-edge technology with unmatched style.",
+    "id": 7,
+    "imageUrl": "/images/Iphone-14.jpeg",
+    "name": "Iphone 14",
+    "price": 1599
+  },
+  {
+    "category_id": 1,
+    "description": "Introducing the iPhone 13, a device that takes smartphone technology to new heights. With its sleek and refined design, this iPhone is a true epitome of elegance. The 6.1-inch Super Retina XDR display showcases vibrant colors and incredible clarity, making every image and video come to life. Powered by the powerful A15 Bionic chip, the iPhone 13 offers exceptional performance, ensuring seamless multitasking and smooth gaming experiences. Capture stunning photos and videos with the advanced camera system, and enjoy enhanced low-light performance and improved image stabilization. With all-day battery life, Face ID for secure authentication, and 5G connectivity, the iPhone 13 is designed to keep up with your fast-paced lifestyle. Experience the next generation of smartphones with the iPhone 13 and elevate your mobile experience to a whole new level.",
+    "id": 8,
+    "imageUrl": "/images/Iphone-13.jpeg",
+    "name": "Iphone 13",
+    "price": 1399
+  }
+]
+```
+
+</details>
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+To show test coverage summary
+
+```bash
+  npm run test -- -coverage
+```
+
+## Authors ✍🏻 & Links 🔗
+
+### Jiho Burgess-Kim
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jiho-burgess-kim-b7882a160/)
+[![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/jiho-burgesskim)
+
+### James-Idiens
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/) [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/James-Idiens)
+
+### William Chu
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/william-chu-b1912b158/) [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WillChu1733)
