@@ -1,6 +1,8 @@
 # Devify
 
-## Getting Started
+## 🚀 About the project
+
+## ⚡️ Getting Started
 
 This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For the best developer experience, install the [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode. Optionally, if you prefer, you may choose to use CSS Modules for a more traditional CSS experience.
 
@@ -28,9 +30,9 @@ This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For th
 
 ## About the Project
 
-### 1. Choosing your data set
+### Backend
 
-### DB Schema
+#### DB Schema
 
 ![db diagram](/public/images/db.png)
 
@@ -63,11 +65,11 @@ Ref: products.category_id > categories.id
 
 ## </details>
 
-### Wireframes
+#### Wireframe
 
 ## ![db diagram](/public/images/Wireframe.png)
 
-## API design
+## Front End
 
 ### Routes
 
@@ -168,8 +170,23 @@ To run tests, run the following command
   npm run test
 ```
 
-## Authors
+To show test coverage summary
 
-- Jiho Burgess-Kim [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jiho-burgess-kim-b7882a160/) [GitHub](https://www.github.com/jiho-burgesskim)
-- James-Idiens [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/) [GitHub](https://github.com/James-Idiens)
-- William Chu [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/william-chu-b1912b158/) [GitHub](https://github.com/WillChu1733)
+```bash
+  npm run test -- -coverage
+```
+
+## Authors ✍🏻 & Links 🔗
+
+### Jiho Burgess-Kim
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jiho-burgess-kim-b7882a160/)
+[![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/jiho-burgesskim)
+
+### James-Idiens
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/) [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/James-Idiens)
+
+### William Chu
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/william-chu-b1912b158/) [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WillChu1733)
