@@ -2,54 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getProductsById } from '../apis/products'
 import { Link, useParams } from 'react-router-dom'
 import { ChangeEvent, useState } from 'react'
-
-// export default function SinglePage() {
-//   const { category, id } = useParams()
-//   const productId = Number(id)
-//   const {
-//     data: product,
-//     isError,
-//     isLoading,
-//   } = useQuery(['product'], () => getProductsById(productId))
-//   console.log(productId)
-//   console.log(category)
-
-//   if (isError) {
-//     return <div>Error occured while getting a product</div>
-//   }
-
-//   if (isLoading) {
-//     return <div>Product is loading...</div>
-//   }
-//   return (
-//     <>
-//       <div className="bg-white font-sans">
-//         <div className="flex mx-auto max-w-2xl px-4 py-5 ">
-//           <div className="">
-//             <div className="bg-white p-4">
-//               <img
-//                 src={product.imageUrl}
-//                 alt={product.name}
-//                 className="object-cover"
-//               />
-//             </div>
-//           </div>
-//           <div>
-//             <h3 className="mt-4 text-xl font-extrabold text-gray-700">
-//               {product.name}
-//             </h3>
-//             <p className="mt-1 text-lg font-normal text-gray-900">
-//               {product.description}
-//             </p>
-//             <p className="mt-1 text-lg font-medium text-gray-900">
-//               ${product.price}
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   )
-// }
+import { useShoppingCart } from '../context/ShoppingCartContext'
 
 export default function SinglePage() {
   const { category, id } = useParams()
@@ -60,7 +13,13 @@ export default function SinglePage() {
     isLoading,
   } = useQuery(['product'], () => getProductsById(productId))
   const [quantity, setQuantity] = useState(1)
-
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFormCart,
+  } = useShoppingCart()
+  const items = getItemQuantity(productId)
   const handleQuantityChange = (e: ChangeEvent<HTMLInputElement>) => {
     setQuantity(parseInt(e.target.value))
   }
@@ -132,6 +91,31 @@ export default function SinglePage() {
                 >
                   Add to Cart
                 </button>
+
+                <div>
+                  {items === 0 ? (
+                    <button onClick={() => increaseCartQuantity(productId)}>
+                      + Add to cart
+                    </button>
+                  ) : (
+                    <div>
+                      <div>
+                        <button onClick={() => decreaseCartQuantity(productId)}>
+                          -
+                        </button>
+                        <div>
+                          <span>{items}</span>
+                        </div>
+                        <button onClick={() => increaseCartQuantity(productId)}>
+                          +
+                        </button>
+                      </div>
+                      <button onClick={() => removeFormCart(productId)}>
+                        Remove
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

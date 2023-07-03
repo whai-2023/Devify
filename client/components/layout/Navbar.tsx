@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NavLinks from './NavLinks'
+import { useShoppingCart } from '../../context/ShoppingCartContext'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const { openCart, cartQuantity } = useShoppingCart()
   return (
     <>
       <nav className="bg-border-stone-100">
@@ -24,6 +26,12 @@ export default function Navbar() {
             <ion-icon name="person-outline"></ion-icon>
 
             <ion-icon name="cart-outline"></ion-icon>
+            <button className="relative" onClick={openCart}>
+              Hi
+            </button>
+            <div className="rounded bg-red flex justify-center  bottom-3 opacity-70">
+              {cartQuantity}
+            </div>
           </div>
         </div>
       </nav>
