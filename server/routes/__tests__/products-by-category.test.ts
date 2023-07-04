@@ -19,7 +19,7 @@ describe('Get /api/v1/products/:category', () => {
       },
     ])
 
-    const response = await request(server).get('/api/v1/products/phones')
+    const response = await request(server).get('/api/v1/products/iphones')
 
     expect(response.body).toMatchInlineSnapshot(`
       [

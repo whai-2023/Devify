@@ -52,7 +52,7 @@ describe('getProductsById', () => {
 //how
 describe('getProductsByCategory', () => {
   it('should return correct array of products', async () => {
-    const products = await getProductsByCategory('phones')
+    const products = await getProductsByCategory('iphones')
     console.log(products)
 
     expect(products).toMatchInlineSnapshot(`

@@ -51,7 +51,7 @@ router.get('/:category', async (req, res) => {
   try {
     const products = await db.getProductsByCategory(category)
     if (
-      !['phones', 'tablets', 'laptops', 'earphones', 'animals'].includes(
+      !['iphones', 'ipads', 'macbooks', 'airpods', 'animals'].includes(
         category.toLowerCase()
       )
     ) {
