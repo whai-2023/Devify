@@ -15,6 +15,7 @@ export const routes = createRoutesFromElements(
       <Route path="cart" element={<Cart />} />
       <Route path="checkout" element={<Checkout />} /> */}
     </Route>
+
     {/* <Route path="*" element={<NotFound />} /> */}
   </>
 )

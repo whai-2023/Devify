@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#D5D2D1',
+        primary: '#000000',
       },
       fontFamily: {
         sans: [
