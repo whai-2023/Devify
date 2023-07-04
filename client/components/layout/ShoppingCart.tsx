@@ -4,6 +4,7 @@ import { CartItem } from './CartItem'
 import { formatCurrency } from '../../utilities/formatCurrency'
 import { useQuery } from '@tanstack/react-query'
 import { getAllProducts } from '../../apis/products'
+import StripeCheckout from './Stripe-Checkout'
 
 type ShoppingCartProps = {
   isOpen: boolean
@@ -45,6 +46,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                 }, 0)
               )}
             </div>
+            <StripeCheckout />
           </Stack>
         </Offcanvas.Body>
       </Offcanvas>
