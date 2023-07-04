@@ -18,11 +18,11 @@ export default function ProductDisplay() {
   }
 
   return (
-    <div className="bg-stone-100 font-sans font-bold py-6 px-4">
+    <div className="bg-stone-100 font-sans font-bold py-6 px-4 ">
       <div className="flex my-2 mx-1 justify-between">
         <h1 className="text-xl">Collection list</h1>
         <Link to={'/'}>
-          <p className="text-xs pt-2 font-light">View all</p>
+          <p className="text-xs pt-2 font-light text-black">View all</p>
         </Link>
       </div>
       <div className="flex max-w-3xl flex-wrap w-full m-auto items-center text-center justify-center object-contain">
@@ -32,8 +32,8 @@ export default function ProductDisplay() {
             className="w-1/2 h-1/2 bg-white border-8 border-stone-100 p-5 "
           >
             <Link to={`/${product.name}`}>
-              <div className="group p-3">
-                <p className="group-hover:-translate-y-3 transform transition-transform">
+              <div className="group p-3 ">
+                <p className="group-hover:-translate-y-3 transform transition-transform text-black no-underline">
                   {product.name}
                 </p>
                 <img
