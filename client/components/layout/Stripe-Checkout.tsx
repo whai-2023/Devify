@@ -23,9 +23,18 @@ export default function StripeCheckout() {
     }
   }
 
+  if (cartItems.length === 0) {
+    return <p>Your shopping cart is empty.</p>
+  }
+
   return (
     <div>
-      <button onClick={handleCheckout}>Checkout</button>
+      <button
+        onClick={handleCheckout}
+        className="bg-black text-white py-2 px-4 rounded-full"
+      >
+        Checkout
+      </button>
     </div>
   )
 }
