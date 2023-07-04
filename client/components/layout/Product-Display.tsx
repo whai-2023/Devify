@@ -14,11 +14,13 @@ export default function ProductDisplay() {
   }
 
   if (isLoading) {
-    return <div>Products are loading...</div>
+    return (
+      <div data-testid="product-display-loading">Products are loading...</div>
+    )
   }
 
   return (
-    <div className="bg-stone-100 font-sans font-bold py-6 px-4 ">
+    <div className="bg-stone-100 font-sans font-bold py-6 px-4">
       <div className="flex my-2 mx-1 justify-between">
         <h1 className="text-xl">Collection list</h1>
         <Link to={'/'}>

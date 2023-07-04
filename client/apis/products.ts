@@ -8,6 +8,7 @@ export async function getAllProducts(): Promise<Products[]> {
 
 export async function getAllCategories(): Promise<Categories[]> {
   const response = await request.get('/api/v1/products')
+  console.log('alkdsflkajd')
   return response.body
 }
 
