@@ -1,11 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
 import { getProductsById } from '../apis/products'
-import { Link, useParams } from 'react-router-dom'
-import { ChangeEvent, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { useShoppingCart } from '../context/ShoppingCartContext'
 
 export default function SinglePage() {
-  const { category, id } = useParams()
+  const { id } = useParams()
   const productId = Number(id)
   const {
     data: product,

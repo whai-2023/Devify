@@ -1,5 +1,5 @@
 import { useShoppingCart } from '../../context/ShoppingCartContext'
-import { Offcanvas, Stack, Button } from 'react-bootstrap'
+import { Offcanvas, Stack } from 'react-bootstrap'
 import { CartItem } from './CartItem'
 import { formatCurrency } from '../../utilities/formatCurrency'
 import { useQuery } from '@tanstack/react-query'

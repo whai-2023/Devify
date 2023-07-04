@@ -7,10 +7,7 @@ function App() {
   return (
     <>
       <ShoppingCartProvider>
-        <div></div>
-        <header>
-          <Navbar />
-        </header>
+        <Navbar />
         <Outlet />
         <Footer />
       </ShoppingCartProvider>
