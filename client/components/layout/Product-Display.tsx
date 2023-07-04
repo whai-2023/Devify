@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 export default function ProductDisplay() {
   const {
-    data: products,
+    data: categories,
     isError,
     isLoading,
-  } = useQuery(['products'], () => getAllCategories())
+  } = useQuery(['categories'], () => getAllCategories())
 
   if (isError) {
     return <div>Error occured while getting Products</div>
@@ -26,19 +26,19 @@ export default function ProductDisplay() {
         </Link>
       </div>
       <div className="flex max-w-3xl flex-wrap w-full m-auto items-center text-center justify-center object-contain">
-        {products.map((product) => (
+        {categories.map((category) => (
           <div
-            key={product.id}
+            key={category.id}
             className="w-1/2 h-1/2 bg-white border-8 border-stone-100 p-5 "
           >
-            <Link to={`/${product.name}`}>
+            <Link to={`/${category.name}`}>
               <div className="group p-3 ">
-                <p className="group-hover:-translate-y-3 transform transition-transform text-black no-underline">
-                  {product.name}
+                <p className="group-hover:-translate-y-3 transform transition-transform">
+                  {category.name}
                 </p>
                 <img
-                  src={product.imageUrl}
-                  alt={product.name}
+                  src={category.imageUrl}
+                  alt={category.name}
                   className="w-64 m-auto mt-2 group-hover:scale-110 transform transition-transform rounded-md"
                 />
               </div>

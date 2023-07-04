@@ -44,7 +44,7 @@ export default function SinglePage() {
 
   return (
     <>
-      <div className="bg-white font-sans">
+      <div className="bg-white font-sans ">
         <div className="container mx-auto px-4 py-5 mt-36">
           <div className="flex flex-wrap items-start">
             <div className="w-full md:w-1/2">

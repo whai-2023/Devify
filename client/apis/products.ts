@@ -1,7 +1,7 @@
 import request from 'superagent'
 import { Categories, Products } from '../../models/products'
 
-export async function getAllProducts(): Promise<Products[] | undefined> {
+export async function getAllProducts(): Promise<Products[]> {
   const response = await request.get('/api/v1/products/all')
   return response.body
 }

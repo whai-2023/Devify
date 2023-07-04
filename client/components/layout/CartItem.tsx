@@ -16,8 +16,6 @@ export function CartItem({ id, quantity }: CartItemProps) {
   } = useQuery(['products'], () => getAllProducts())
 
   const { removeFormCart } = useShoppingCart()
-  const item = storeItems.find((i) => i.id === id)
-  if (item == null) return null
 
   if (isError) {
     return <div>Error occurred while getting products</div>
@@ -26,6 +24,9 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (isLoading) {
     return <div>Products are loading...</div>
   }
+  const item = storeItems.find((i) => i.id === id)
+
+  if (item == null) return null
 
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">

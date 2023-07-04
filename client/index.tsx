@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { routes } from './routes'
 import 'bootstrap/dist/css/bootstrap.css'
+import './styles/index.css'
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter(routes)
