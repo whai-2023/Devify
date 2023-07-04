@@ -100,10 +100,10 @@ Response:
 
 ```json
 [
-  { "id": 1, "name": "phones", "imageUrl": "/images/Iphone-14-Pro.jpeg" },
-  { "id": 2, "name": "laptops", "imageUrl": "/images/Macbook-Pro-14-M1.jpeg" },
-  { "id": 3, "name": "tablets", "imageUrl": "/images/Ipad-Pro.jpeg" },
-  { "id": 4, "name": "earphones", "imageUrl": "/images/Airpod-Pro.jpeg" },
+  { "id": 1, "name": "iphones", "imageUrl": "/images/Iphone-14-Pro.jpeg" },
+  { "id": 2, "name": "macbooks", "imageUrl": "/images/Macbook-Pro-14-M1.jpeg" },
+  { "id": 3, "name": "ipads", "imageUrl": "/images/Ipad-Pro.jpeg" },
+  { "id": 4, "name": "airpods", "imageUrl": "/images/Airpod-Pro.jpeg" },
   { "id": 5, "name": "animals", "imageUrl": "/images/Cream.png" }
 ]
 ```

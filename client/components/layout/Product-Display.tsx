@@ -19,13 +19,13 @@ export default function ProductDisplay() {
 
   return (
     <div className="bg-stone-100 font-sans font-bold py-6 px-4 ">
-      <div className="flex my-2 mx-1 justify-between">
-        <h1 className="text-xl">Collection list</h1>
+      <div className="flex my-2 justify-between w-3/4 mx-auto max-w-6xl ">
+        <h1 className="text-4xl">Collection list</h1>
         <Link to={'/'}>
-          <p className="text-xs pt-2 font-light text-black">View all</p>
+          <p className="text-md pt-2 font-light">View all</p>
         </Link>
       </div>
-      <div className="flex max-w-3xl flex-wrap w-full m-auto items-center text-center justify-center object-contain">
+      <div className="flex max-w-6xl flex-wrap w-3/4 m-auto items-center text-center justify-center object-contain">
         {categories.map((category) => (
           <div
             key={category.id}
@@ -33,8 +33,8 @@ export default function ProductDisplay() {
           >
             <Link to={`/${category.name}`}>
               <div className="group p-3 ">
-                <p className="group-hover:-translate-y-3 transform transition-transform">
-                  {category.name}
+                <p className="group-hover:-translate-y-3 transform transition-transform text-xl mb-5">
+                  {category.name.toUpperCase()}
                 </p>
                 <img
                   src={category.imageUrl}

@@ -9,7 +9,7 @@ vi.mock('../../db/functions/products')
 describe('Get /api/v1/products', () => {
   it('should return array of products', async () => {
     vi.mocked(getAllCategories).mockResolvedValue([
-      { id: 1, name: 'phones', imageUrl: '/images/Iphone-14-Pro.jpeg' },
+      { id: 1, name: 'iphones', imageUrl: '/images/Iphone-14-Pro.jpeg' },
     ])
 
     const response = await request(server).get('/api/v1/products')
@@ -19,7 +19,7 @@ describe('Get /api/v1/products', () => {
         {
           "id": 1,
           "imageUrl": "/images/Iphone-14-Pro.jpeg",
-          "name": "phones",
+          "name": "iphones",
         },
       ]
     `)

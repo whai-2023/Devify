@@ -24,13 +24,13 @@ export default function ImageCarousel() {
     buttonText: string
     productPageUrl: string
   }) => (
-    <div className="relative">
+    <div className="relative pt-20 bg-black">
       <img
         src={imageSrc}
         alt={title}
-        className="object-cover w-full h-80 sm:h-96 brightness-75 lg:h-[600px]"
+        className="object-cover mx-auto h-80 sm:h-96 brightness-75 lg:h-[700px] "
       />
-      <div className="absolute bottom-4 left-4">
+      <div className="absolute bottom-12 left-72">
         <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
         <h3 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">
           {name}
@@ -53,33 +53,33 @@ export default function ImageCarousel() {
             key="macbook"
             imageSrc={macbookImage}
             title="Introducing the"
-            name="MACBOOK PRO"
+            name="MacBook Pro"
             buttonText="Shop Now"
-            productPageUrl="/macbook" // LINKS NEED TO BE UPDATED
+            productPageUrl="/macbooks"
           />,
           <Slide
             key="iphone"
             imageSrc={iphoneImage}
             title="Discover the new"
-            name="IPHONE 14 PRO"
+            name="Iphone 14 Pro"
             buttonText="Shop Now"
-            productPageUrl="/iphone" // LINKS NEED TO BE UPDATED
+            productPageUrl="/iphones"
           />,
           <Slide
             key="ipad"
             imageSrc={ipadImage}
             title="Experience the Latest"
-            name="IPAD"
+            name="Ipad"
             buttonText="Shop Now"
-            productPageUrl="/ipad" // LINKS NEED TO BE UPDATED
+            productPageUrl="/ipads"
           />,
           <Slide
             key="airpods"
             imageSrc={airpodImage}
             title="Get Immersed in Sound with"
-            name="AIRPODS"
+            name="Airpods"
             buttonText="Shop Now"
-            productPageUrl="/airpods" // LINKS NEED TO BE UPDATED
+            productPageUrl="/airpods"
           />,
         ]}
         onSlideChanged={handleSlideChange}

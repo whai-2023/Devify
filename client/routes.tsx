@@ -10,12 +10,6 @@ export const routes = createRoutesFromElements(
       <Route index element={<Home />} />
       <Route path="/:category" element={<CategoryPage />} />
       <Route path="/:category/:id" element={<SinglePage />} />
-      {/* <Route path="products" element={<Products />} />
-      <Route path="products/:id" element={<ProductDetail />} />
-      <Route path="cart" element={<Cart />} />
-      <Route path="checkout" element={<Checkout />} /> */}
     </Route>
-
-    {/* <Route path="*" element={<NotFound />} /> */}
   </>
 )
