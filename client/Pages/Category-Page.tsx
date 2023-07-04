@@ -8,7 +8,9 @@ export default function CategoryPage() {
     data: products,
     isError,
     isLoading,
-  } = useQuery(['products'], () => getProductsByCategory(category as string))
+  } = useQuery(['products', category], () =>
+    getProductsByCategory(category as string)
+  )
 
   if (isError) {
     return <div>Error occured while getting Products</div>

@@ -3,6 +3,7 @@ import App from './components/App'
 import Home from './Pages/Home'
 import CategoryPage from './Pages/Category-Page'
 import SinglePage from './Pages/Single-Product-Page'
+import { ShoppingCartProvider } from './context/ShoppingCartContext'
 
 export const routes = createRoutesFromElements(
   <>
@@ -15,6 +16,7 @@ export const routes = createRoutesFromElements(
       <Route path="cart" element={<Cart />} />
       <Route path="checkout" element={<Checkout />} /> */}
     </Route>
+
     {/* <Route path="*" element={<NotFound />} /> */}
   </>
 )
