@@ -1,34 +1,49 @@
-# Devify
+# Devify 💻
 
-## 🚀 About the project
+Welcome to Devify, where we're redefining the online shopping experience. Inspired by the best, we've built an advanced e-commerce platform, offering unmatched user-friendliness and innovative features. With Devify, you'll find seamless customization, powerful analytics, secure payments, and exceptional customer engagement. Join us as we transform the way you sell, connect, and thrive in the digital world. Welcome to Devify – Where e-commerce dreams become reality.
 
-## ⚡️ Getting Started
+## Getting Started ⚡️
 
-This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For the best developer experience, install the [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode. Optionally, if you prefer, you may choose to use CSS Modules for a more traditional CSS experience.
+To get started with Devify, follow these simple steps:
+
+1. Clone the Devify repository from GitHub.
+2. Install the necessary dependencies (e.g `npm install `)
+3. Customise the items by modifying the seeds files.
+4. Set up the database and configure the necessary environment variables.
+5. Run the application locally or deploy it to your preferred hosting platform.
+
+For detailed installation and setup instructions, please refer to the [documentation]().
 
 ### Frontend:
 
-- [React](https://react.dev/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [CSS Modules](https://github.com/css-modules/css-modules)
-- [React Router](https://reactrouter.com/)
-- [Vite](https://vitejs.dev/)
-- [React Query](https://tanstack.com/query/latest/docs/react/overview)
+- [![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+- [![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+- [![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)](https://github.com/css-modules/css-modules)
+- [![reactrouter](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
+- [![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=for-the-badge)](https://vitejs.dev/)
+
+- [![React Query](https://img.shields.io/badge/React%20Query-FF4154?logo=reactquery&logoColor=fff&style=for-the-badge)](https://tanstack.com/query/latest/docs/react/overview)
+- [![Stripe](https://img.shields.io/badge/Stripe-008CDD?logo=stripe&logoColor=fff&style=for-the-badge)](https://stripe.com/docs/development)
+- [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff&style=for-the-badge)](https://getbootstrap.com/docs/4.0/layout/overview/)
 
 ### Backend:
 
-- [Express](https://expressjs.com/)
+- [![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com/)
+- [![Stripe](https://img.shields.io/badge/Stripe-008CDD?logo=stripe&logoColor=fff&style=for-the-badge)](https://stripe.com/docs/development)
+- [![SQLite3](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html)
 - [Knex](http://knexjs.org/)
-- [SQLite3](https://www.sqlite.org/index.html)
 
 ### Testing:
 
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [Vitest](https://vitest.dev/)
+- [![React Testing Library](https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red)](https://testing-library.com/docs/react-testing-library/intro/)
+- [![Vitest](https://img.shields.io/badge/Vitest-6E9F18?logo=vitest&logoColor=fff&style=for-the-badge)](https://vitest.dev/)
 - [nock](https://github.com/nock/nock)
 - [supertest](https://github.com/visionmedia/supertest)
 
-## About the Project
+This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For the best developer experience, install the [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode. Optionally, if you prefer, you may choose to use CSS Modules for a more traditional CSS experience.
+
+## About the project 🚀
 
 ### Backend
 
@@ -176,7 +191,23 @@ To show test coverage summary
   npm run test -- -coverage
 ```
 
-## Authors ✍🏻 & Links 🔗
+## Support
+
+If you encounter any issues or have any questions or suggestions, please feel free to reach out to our support team at support@devify.com. We are committed to providing excellent support and ensuring a smooth experience with Devify.
+
+## Contributing
+
+We welcome contributions from the community to make Devify even better. If you'd like to contribute, please follow our contribution guidelines and submit a pull request. Together, let's take Devify to new heights!
+
+## License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute this software according to the terms of the license.
+
+## Acknowledgements
+
+We would like to express our gratitude to the open-source community for their invaluable contributions and inspiration. Without their dedication and efforts, Devify would not have been possible.
+
+## Authors ✍🏻
 
 ### Jiho Burgess-Kim
 
