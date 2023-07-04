@@ -20,7 +20,7 @@ export default function NavbarProduct() {
   return (
     <div className="bg-white font-sans font-bold py-6 px-4 m-auto">
       {/* <div className="flex-row w-1/2 m-auto items-center text-center justify-center object-contain"> */}
-      {categories.slice(0, 3).map((category) => (
+      {categories.slice(0, 4).map((category) => (
         <div
           key={category.id}
           className="w-1/3 h-1/3 bg-white p-5 inline-block"

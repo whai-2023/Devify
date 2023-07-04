@@ -24,7 +24,7 @@ export default function ImageCarousel() {
     buttonText: string
     productPageUrl: string
   }) => (
-    <div className="relative">
+    <div className="relative pt-20">
       <img
         src={imageSrc}
         alt={title}

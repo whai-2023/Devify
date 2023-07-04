@@ -22,10 +22,10 @@ export default function CategoryPage() {
 
   return (
     <>
-      <div className="bg-stone-100">
+      <div className="bg-stone-100 pt-20">
         <div className="mx-auto max-w-2xl px-4 py-5 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <div className="flex my-2 mx-1 justify-between">
-            <h1 className="text-xl">{category} list</h1>
+            <h1 className="text-4xl">{category} list</h1>
           </div>
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
