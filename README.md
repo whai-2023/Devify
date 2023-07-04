@@ -24,12 +24,15 @@ For detailed installation and setup instructions, please refer to the [documenta
 - [![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=for-the-badge)](https://vitejs.dev/)
 
 - [![React Query](https://img.shields.io/badge/React%20Query-FF4154?logo=reactquery&logoColor=fff&style=for-the-badge)](https://tanstack.com/query/latest/docs/react/overview)
+- [![Stripe](https://img.shields.io/badge/Stripe-008CDD?logo=stripe&logoColor=fff&style=for-the-badge)](https://stripe.com/docs/development)
+- [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff&style=for-the-badge)](https://getbootstrap.com/docs/4.0/layout/overview/)
 
 ### Backend:
 
 - [![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com/)
-- [Knex](http://knexjs.org/)
+- [![Stripe](https://img.shields.io/badge/Stripe-008CDD?logo=stripe&logoColor=fff&style=for-the-badge)](https://stripe.com/docs/development)
 - [![SQLite3](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html)
+- [Knex](http://knexjs.org/)
 
 ### Testing:
 
