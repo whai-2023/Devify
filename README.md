@@ -32,14 +32,15 @@ For detailed installation and setup instructions, please refer to the [documenta
 - [![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com/)
 - [![Stripe](https://img.shields.io/badge/Stripe-008CDD?logo=stripe&logoColor=fff&style=for-the-badge)](https://stripe.com/docs/development)
 - [![SQLite3](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html)
-- [Knex](http://knexjs.org/)
+- [![Knex](https://img.shields.io/badge/Knex.js-FF781F?style=for-the-badge)](http://knexjs.org/)
+- [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)](https://docs.docker.com/get-started/overview/)
 
 ### Testing:
 
 - [![React Testing Library](https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red)](https://testing-library.com/docs/react-testing-library/intro/)
 - [![Vitest](https://img.shields.io/badge/Vitest-6E9F18?logo=vitest&logoColor=fff&style=for-the-badge)](https://vitest.dev/)
-- [nock](https://github.com/nock/nock)
-- [supertest](https://github.com/visionmedia/supertest)
+- [![nock](https://img.shields.io/badge/nock-FEFEFE?style=for-the-badge)](https://github.com/nock/nock)
+- [![supertest](https://img.shields.io/badge/Supertest-A4De02?style=for-the-badge)](https://github.com/visionmedia/supertest)
 
 This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For the best developer experience, install the [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode. Optionally, if you prefer, you may choose to use CSS Modules for a more traditional CSS experience.
 
