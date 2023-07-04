@@ -4,7 +4,6 @@ import * as db from '../db/functions/products'
 const router = Router()
 
 // GET all
-
 router.get('/', async (req, res) => {
   try {
     const categories = await db.getAllCategories()
@@ -12,6 +11,17 @@ router.get('/', async (req, res) => {
   } catch (error) {
     console.error(error)
     res.status(500).send({ error: 'Could not get categories' })
+  }
+})
+
+// GET /api/v1/products/all
+router.get('/all', async (req, res) => {
+  try {
+    const products = await db.getAllProducts()
+    res.json(products)
+  } catch (error) {
+    console.error(error)
+    res.status(500).send({ error: 'Could not get products' })
   }
 })
 
