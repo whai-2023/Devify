@@ -3,7 +3,6 @@ import App from './components/App'
 import Home from './Pages/Home'
 import CategoryPage from './Pages/Category-Page'
 import SinglePage from './Pages/Single-Product-Page'
-import { ShoppingCartProvider } from './context/ShoppingCartContext'
 
 export const routes = createRoutesFromElements(
   <>
