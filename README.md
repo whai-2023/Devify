@@ -2,6 +2,9 @@
 
 Welcome to Devify, where we're redefining the online shopping experience. Inspired by the best, we've built an advanced e-commerce platform, offering unmatched user-friendliness and innovative features. With Devify, you'll find seamless customization, powerful analytics, secure payments, and exceptional customer engagement. Join us as we transform the way you sell, connect, and thrive in the digital world. Welcome to Devify – Where e-commerce dreams become reality.
 
+Our inspiration for this website came from the aesthetics of petkit.com
+and the
+
 ## Getting Started ⚡️
 
 To get started with Devify, follow these simple steps:
@@ -39,10 +42,10 @@ For detailed installation and setup instructions, please refer to the [documenta
 
 - [![React Testing Library](https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red)](https://testing-library.com/docs/react-testing-library/intro/)
 - [![Vitest](https://img.shields.io/badge/Vitest-6E9F18?logo=vitest&logoColor=fff&style=for-the-badge)](https://vitest.dev/)
-- [![nock](https://img.shields.io/badge/nock-FEFEFE?style=for-the-badge)](https://github.com/nock/nock)
+- [![nock](https://img.shields.io/badge/nock-ACADA8?style=for-the-badge)](https://github.com/nock/nock)
 - [![supertest](https://img.shields.io/badge/Supertest-A4De02?style=for-the-badge)](https://github.com/visionmedia/supertest)
 
-This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For the best developer experience, install the [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode. Optionally, if you prefer, you may choose to use CSS Modules for a more traditional CSS experience.
+This repository uses [TailwindCSS](https://tailwindcss.com/) for styling. For the best developer experience, install the [TailwindCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode. The animations for the shopping cart feature was made possible using [Bootstrap](https://getbootstrap.com/). Optionally, if you prefer, you may choose to use CSS Modules for a more traditional CSS experience.
 
 ## About the project 🚀
 
@@ -105,6 +108,41 @@ Response:
   { "id": 3, "name": "ipads", "imageUrl": "/images/Ipad-Pro.jpeg" },
   { "id": 4, "name": "airpods", "imageUrl": "/images/Airpod-Pro.jpeg" },
   { "id": 5, "name": "animals", "imageUrl": "/images/Cream.png" }
+]
+```
+
+</details>
+
+#### GET `/api/v1/products/all`
+
+<details>
+
+Request:
+`GET /api/v1/products/all`
+
+Response:
+
+```json
+[
+  {
+      "id": 1,
+      "name": "Iphone 14 Pro",
+      "price": 1999,
+      "description": "Experience the pinnacle of innovation with the Apple iPhone 14 Pro. Boasting a 6.7-inch Super Retina XDR display with ProMotion technology, it delivers breathtaking visuals. Powered by the A16 Bionic chip and 8GB of RAM, this device offers unmatched performance and smooth multitasking. Capture professional-quality photos and videos with the triple-camera system and take advantage of the LiDAR scanner for augmented reality experiences. Your data remains secure with Face ID, and the larger battery supports fast charging and wireless charging. With 5G connectivity and iOS 15, the iPhone 14 Pro is a testament to Apple's commitment to excellence.",
+      "imageUrl": "/images/Iphone-14-Pro.jpeg",
+      "category_id": 1,
+    },
+    .
+    .
+    .
+    {
+      "id": 20,
+      "name": "Doug",
+      "price": 9999,
+      "description": "Introducing Doug, the adorable Corgi and faithful companion of William. With his short legs and endearing appearance, Doug is undeniably one of the cutest dogs around. Despite his small stature, Doug possesses an abundance of energy and a playful spirit that brings joy to everyone around him. Whether it's chasing after his favorite toys or going for walks with William, Doug's enthusiasm is contagious. His loving and loyal nature make him the perfect companion for William, providing endless cuddles and unwavering companionship. With his irresistible charm and cute antics, Doug has a special place in William's heart, bringing warmth and happiness to their lives each and every day.",
+      "imageUrl": "/images/Doug.png",
+      "category_id": 5,
+    },
 ]
 ```
 

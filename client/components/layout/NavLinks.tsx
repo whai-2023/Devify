@@ -29,10 +29,10 @@ export default function NavLink() {
           <div className="px-5 md:cursor-pointer group hover:text-primary h-full flex justify-center">
             <h1 className="py-4 my-auto">{links.name}</h1>
             {links.submenu && (
-              <div className="w-full absolute top-20 hidden left-0 group-hover:md:block">
-                <div className="bg-white flex border-2 border-t-slate-800 justify-between">
+              <div className="w-full absolute top-20 left-0 hidden group-hover:md:block">
+                <div className="bg-white flex border-2 border-t-slate-800 justify-center">
                   {links.sublinks.map((mysublinks) => (
-                    <div key={mysublinks.Head} className="ml-40">
+                    <div key={mysublinks.Head} className="">
                       <h1 className="text-base ml-24 pt-10 pb-4">
                         {mysublinks.Head}
                       </h1>

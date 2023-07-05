@@ -17,34 +17,40 @@ export default function ProductDisplay() {
     return <div>Products are loading...</div>
   }
 
+  const isOdd = categories.length % 2 !== 0
+
   return (
     <div className="bg-stone-100 font-sans font-bold py-6 px-4 ">
-      <div className="flex my-2 justify-between w-3/4 mx-auto max-w-6xl ">
-        <h1 className="text-4xl">Collection list</h1>
-        <Link to={'/'}>
-          <p className="text-md pt-2 font-light">View all</p>
-        </Link>
-      </div>
-      <div className="flex max-w-6xl flex-wrap w-3/4 m-auto items-center text-center justify-center object-contain">
-        {categories.map((category) => (
-          <div
-            key={category.id}
-            className="w-1/2 h-1/2 bg-white border-8 border-stone-100 p-5 "
-          >
-            <Link to={`/${category.name}`}>
-              <div className="group p-3 ">
-                <p className="group-hover:-translate-y-3 transform transition-transform text-xl mb-5">
-                  {category.name.toUpperCase()}
-                </p>
-                <img
-                  src={category.imageUrl}
-                  alt={category.name}
-                  className="w-64 m-auto mt-2 group-hover:scale-110 transform transition-transform rounded-md"
-                />
-              </div>
-            </Link>
-          </div>
-        ))}
+      <div className="mx-auto max-w-4xl px-4 py-5 sm:px-6 sm:py-24 lg:max-w-5xl lg:px-8">
+        <div className="flex my-2 mx-1 justify-between">
+          <h1 className="text-2xl lg:text-4xl">Collection list</h1>
+          <Link to={'/'}>
+            <p className="text-md pt-2 font-light">View all</p>
+          </Link>
+        </div>
+        <div className="border-stone-100 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-4 xl:gap-x-8">
+          {categories.map((category) => (
+            <div
+              key={category.id}
+              className={`bg-white p-4 sm:col-span-2 ${
+                isOdd ? 'sm:last:col-start-2' : ''
+              }`}
+            >
+              <Link to={`/${category.name}`} className="group">
+                <div className="w-full overflow-hidden rounded-lg">
+                  <p className="mt-4 text-md text-gray-700 group-hover:-translate-y-3 transform transition-transform text-center">
+                    {category.name.toUpperCase()}
+                  </p>
+                  <img
+                    src={category.imageUrl}
+                    alt={category.name}
+                    className="h-full w-full object-cover object-center group-hover:opacity-75 group-hover:scale-110 transform transition-transform p-5"
+                  />
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

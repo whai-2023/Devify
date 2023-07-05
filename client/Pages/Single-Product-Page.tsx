@@ -1,11 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
 import { getProductsById } from '../apis/products'
-import { Link, useParams } from 'react-router-dom'
-import { ChangeEvent, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { useShoppingCart } from '../context/ShoppingCartContext'
 
 export default function SinglePage() {
-  const { category, id } = useParams()
+  const { id } = useParams()
   const productId = Number(id)
   const {
     data: product,
@@ -55,9 +54,6 @@ export default function SinglePage() {
               </p>
 
               <div className="flex gap-x-6">
-                <button className="px-4 py-2 bg-blue-500 text-white font-medium rounded-md">
-                  Buy Now
-                </button>
                 <div>
                   {items === 0 ? (
                     <button
