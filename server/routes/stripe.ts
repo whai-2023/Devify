@@ -92,7 +92,4 @@ router.post('/create-checkout-session', async (req, res) => {
   res.send({ url: session.url })
 })
 
-router.get('/checkout-success', async (req, res) => {})
-
-router.get('/checkout-failure', async (req, res) => {})
 export default router
