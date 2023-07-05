@@ -17,6 +17,9 @@ export default function Navbar() {
                 </h1>
               </Link>
             </div>
+            <div className="md:hidden">
+              <IonIcon className="text-2xl" name="menu-outline"></IonIcon>
+            </div>
             <div className="h-full align-middle">
               <ul className="md:flex hidden uppercase items-center h-full">
                 <NavLinks />

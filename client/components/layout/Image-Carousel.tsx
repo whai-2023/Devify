@@ -28,15 +28,15 @@ export default function ImageCarousel() {
       <img
         src={imageSrc}
         alt={title}
-        className="object-cover mx-auto h-80 sm:h-96 brightness-75 lg:h-[700px] "
+        className="object-cover mx-auto h-80 sm:h-80 brightness-75 lg:h-[700px] "
       />
-      <div className="absolute bottom-12 left-72">
+      <div className="absolute bottom-8 left-8 lg:bottom-12 lg:left-36 xl:bottom-12 xl:left-72">
         <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
         <h3 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">
           {name}
         </h3>
         <Link to={productPageUrl}>
-          <button className="bg-white hover:bg-grey-400 text-black font-bold py-3 px-6 sm:py-4 sm:px-8 lg:py-5 lg:px-9 rounded-full">
+          <button className="bg-white hover:bg-grey-400 text-black font-bold py-3 px-6 mt-3 sm:py-4 sm:px-8 lg:py-5 lg:px-9 rounded-full">
             {buttonText}
           </button>
         </Link>
