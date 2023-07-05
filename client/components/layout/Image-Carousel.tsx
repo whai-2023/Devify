@@ -7,10 +7,6 @@ import airpodImage from '/images/airpods-carousel.png'
 import { Link } from 'react-router-dom'
 
 export default function ImageCarousel() {
-  const handleSlideChange = (event: { item: number }) => {
-    console.log(`Slide changed to index: ${event.item}`)
-  }
-
   const Slide = ({
     imageSrc,
     title,
@@ -82,7 +78,6 @@ export default function ImageCarousel() {
             productPageUrl="/airpods"
           />,
         ]}
-        onSlideChanged={handleSlideChange}
         autoPlay={true}
         disableButtonsControls
         autoPlayInterval={2000}
