@@ -19,13 +19,12 @@ export default function NavbarProduct() {
 
   return (
     <div className="bg-white font-sans font-bold py-6 px-4 mr-40">
-      {/* <div className="flex-row w-1/2 m-auto items-center text-center justify-center object-contain"> */}
       {categories.slice(0, 3).map((category) => (
         <div
           key={category.id}
           className="w-1/3 h-1/3 bg-white p-5 inline-block"
         >
-          <Link to={'/'}>
+          <Link to={`/${category.name}`}>
             <div className="group p-3 w-80">
               <p className="group-hover:-translate-y-3 transform transition-transform">
                 {category.name}
@@ -39,7 +38,6 @@ export default function NavbarProduct() {
           </Link>
         </div>
       ))}
-      {/* </div> */}
     </div>
   )
 }
