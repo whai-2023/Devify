@@ -54,9 +54,6 @@ export default function SinglePage() {
               </p>
 
               <div className="flex gap-x-6">
-                <button className="px-4 py-2 bg-blue-500 text-white font-medium rounded-md">
-                  Buy Now
-                </button>
                 <div>
                   {items === 0 ? (
                     <button
