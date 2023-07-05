@@ -31,8 +31,9 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
       <Offcanvas show={isOpen} onHide={closeCart} placement="end">
         <Offcanvas.Header>
           <Offcanvas.Title>Cart</Offcanvas.Title>
-          {/* <button onClick={closeCart}>X</button> */}
-          <img src="/assets/cross.svg" />
+          <button onClick={closeCart}>
+            <img className="" src="/assets/cross.svg" alt="closeCart" />
+          </button>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Stack gap={3}>
